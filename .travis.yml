@@ -4,6 +4,8 @@ php:
   - nightly
 env:
   - DB=mysql
+services:
+  - mysql  
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
