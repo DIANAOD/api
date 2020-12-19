@@ -7,6 +7,3 @@ services:
 before_script:
 - mysql -e 'create database bookstore;'
 - composer self-update
-
-script:
-    - API/php/db
