@@ -7,8 +7,6 @@ services:
 before_script:
 - mysql -e 'create database bookstore;'
 - composer self-update
-- php artisan key:generate
-- php artisan migrate --seed
 
 script:
     - API/php/db
