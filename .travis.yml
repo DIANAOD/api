@@ -12,9 +12,10 @@ addons:
     packages:
       - mysql-server
 
-dist: trusty
-
-sudo: required
-
 before_script:
- - mysql -e 'create database bookstore;'
+  - cp .env.travis .env
+  - sudo mysql -e 'create database bookstore;'
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+  - php artisan key:generate
+  - php artisan migrate
