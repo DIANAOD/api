@@ -4,8 +4,6 @@ php:
   - '7.1'
 services:
   - mysql
-
-
 before_script:
   - cp .env.travis .env
   - sudo mysql -e 'create database bookstore;'
